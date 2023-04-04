@@ -12,7 +12,7 @@ import {
 import styles from "../style";
 
 const HomePage = () => {
-  const [data, setData] = useState("");
+  const [, setData] = useState("");
 
   useEffect(() => {
     (async function () {
