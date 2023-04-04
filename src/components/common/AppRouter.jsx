@@ -5,11 +5,12 @@ import PrivateRoute from "./PrivateRoute";
 import HomePage from "../../pages/Home";
 import LoginPage from "../../pages/Login";
 import SignupPage from "../../pages/Signup";
-import DashboardPage from "../../pages/Dashboard";
+import TransactionsPage from "../../pages/Transactions";
 import ProfilePage from "../../pages/Profile";
 import EditProfilePage from "../../pages/EditProfile";
 import NewTransactionPage from "../../pages/NewTransaction";
 import NotFoundPage from "../../pages/NotFound";
+import SuccessTxnPage from "../../pages/SuccessTxn";
 
 const AppRouter = () => {
   return (
@@ -23,10 +24,10 @@ const AppRouter = () => {
         {/* PRIVATE ROUTES */}
         <Route
           exact
-          path="/dashboard"
+          path="/transactions"
           element={
             <PrivateRoute>
-              <DashboardPage />
+              <TransactionsPage />
             </PrivateRoute>
           }
         />
@@ -54,6 +55,15 @@ const AppRouter = () => {
           element={
             <PrivateRoute>
               <NewTransactionPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          exact
+          path="/tx/success"
+          element={
+            <PrivateRoute>
+              <SuccessTxnPage />
             </PrivateRoute>
           }
         />

@@ -29,8 +29,8 @@ export const navLinks = [
     title: "Signup",
   },
   {
-    id: "/dashboard",
-    title: "Dashboard",
+    id: "/transactions",
+    title: "Transactions",
   },
   {
     id: "/profile",
@@ -59,6 +59,33 @@ export const features = [
     title: "Balance Transfer",
     content:
       "A balance transfer credit card can save you a lot of money in interest charges.",
+  },
+];
+
+export const transactions = [
+  {
+    id: "txn-1",
+    icon: star,
+    amount: "100,000",
+    title: "@ValeriaB_",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minima consequuntur fuga natus neque? Doloribus illo impedit autem sequi dicta!",
+  },
+  {
+    id: "txn-2",
+    icon: send,
+    amount: "3,000",
+    title: "@alice",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minima consequuntur fuga natus neque? Doloribus illo impedit autem sequi dicta!",
+  },
+  {
+    id: "txn-3",
+    icon: send,
+    amount: "1025.64",
+    title: "@patydev",
+    content:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam minima consequuntur fuga natus neque? Doloribus illo impedit autem sequi dicta!",
   },
 ];
 

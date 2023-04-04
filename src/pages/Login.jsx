@@ -20,7 +20,7 @@ const LoginPage = () => {
     setAuth(inputValues.email + "|" + inputValues.password);
     // TODO make request and validate
     // if (true) {
-    //   window.location.href = "/dashboard";
+    //   window.location.href = "/transactions";
     // }
   };
 
@@ -32,8 +32,7 @@ const LoginPage = () => {
             <h2 className={styles.heading2}>
               {/* You do the business, <br className="sm:block hidden" /> we’ll
               handle the money. */}
-              Let's make <br className="sm:block hidden" />
-              transactions!
+              Let's make transactions!
             </h2>
             <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
               Login and send money to anyone.
@@ -135,8 +134,8 @@ const LoginPage = () => {
                 </div> */}
 
                 <div class="flex w-full">
-                  <button
-                    type="submit"
+                  <Link
+                    to={"/transactions"}
                     class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-secondary rounded py-2 w-full transition duration-150 ease-in"
                   >
                     <span class="mr-2 uppercase">Login</span>
@@ -153,7 +152,7 @@ const LoginPage = () => {
                         <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </span>
-                  </button>
+                  </Link>
                 </div>
               </form>
             </div>

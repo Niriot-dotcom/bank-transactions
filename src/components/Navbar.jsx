@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -15,9 +14,10 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
+              window.location.pathname === nav.id
+                ? "text-white"
+                : "text-dimWhite"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
           >
             <a href={`${nav.id}`}>{nav.title}</a>
           </li>
@@ -42,9 +42,10 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
+                  window.location.pathname === nav.id
+                    ? "text-white"
+                    : "text-dimWhite"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
               >
                 <a href={`${nav.id}`}>{nav.title}</a>
               </li>
