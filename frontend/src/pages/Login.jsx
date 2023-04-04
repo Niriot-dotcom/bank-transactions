@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const LoginPage = () => {
-  const [setAuth] = useLocalStorage("auth", "");
+  const [, setAuth] = useLocalStorage("auth", "");
   const [inputValues, setInputValues] = useState({ email: "", password: "" });
 
   const handleChangeInputs = (e) => {
@@ -19,9 +19,9 @@ const LoginPage = () => {
     console.log(inputValues.email + "|" + inputValues.password);
     setAuth(inputValues.email + "|" + inputValues.password);
     // TODO make request and validate
-    // if (true) {
-    //   window.location.href = "/transactions";
-    // }
+    if (true) {
+      window.location.href = "/transactions";
+    }
   };
 
   return (
@@ -134,10 +134,7 @@ const LoginPage = () => {
                 </div> */}
 
                 <div class="flex w-full">
-                  <Link
-                    to={"/transactions"}
-                    class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-secondary rounded py-2 w-full transition duration-150 ease-in"
-                  >
+                  <button class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-primary hover:bg-secondary rounded py-2 w-full transition duration-150 ease-in">
                     <span class="mr-2 uppercase">Login</span>
                     <span>
                       <svg
@@ -152,7 +149,7 @@ const LoginPage = () => {
                         <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </span>
-                  </Link>
+                  </button>
                 </div>
               </form>
             </div>

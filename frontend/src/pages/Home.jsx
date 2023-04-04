@@ -33,7 +33,7 @@ const HomePage = () => {
     <div className="bg-primary w-full overflow-hidden">
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <div>{data}</div>
+          {/* <div>{data}</div> */}
           <Hero />
         </div>
       </div>
