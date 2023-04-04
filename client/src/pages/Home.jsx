@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Billing,
   Business,
@@ -12,10 +12,28 @@ import {
 import styles from "../style";
 
 const HomePage = () => {
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    (async function () {
+      fetch(`/api/message`)
+        .then(function (response) {
+          // console.log("response.text(): ", response.text());
+          // console.log("response.json(): ", response.json());
+          return response.text();
+        })
+        .then(function (d) {
+          console.log(d); // this will be a string
+          setData(d);
+        });
+    })();
+  });
+
   return (
     <div className="bg-primary w-full overflow-hidden">
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
+          <div>{data}</div>
           <Hero />
         </div>
       </div>
