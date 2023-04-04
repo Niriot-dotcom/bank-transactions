@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const LoginPage = () => {
-  const [_, setAuth] = useLocalStorage("auth", "");
+  const [setAuth] = useLocalStorage("auth", "");
   const [inputValues, setInputValues] = useState({ email: "", password: "" });
 
   const handleChangeInputs = (e) => {

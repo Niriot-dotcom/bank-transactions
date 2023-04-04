@@ -1,20 +1,8 @@
 import React from "react";
-import {
-  Billing,
-  Business,
-  CTA,
-  CardDeal,
-  Clients,
-  Hero,
-  Stats,
-  Testimonials,
-} from "../components";
 import styles from "../style";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NotFoundPage = () => {
-  const navigate = useNavigate();
-
   return (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>

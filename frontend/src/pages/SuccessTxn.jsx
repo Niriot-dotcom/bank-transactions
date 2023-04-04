@@ -1,25 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../style";
 import { Link } from "react-router-dom";
 
 const SuccessTxnPage = () => {
-  const [inputValues, setInputValues] = useState({ password: "" });
-
-  const handleChangeInputs = (e) => {
-    const { name, value } = e.target;
-    setInputValues({ ...inputValues, [name]: value });
-  };
-
-  const handleSubmitEdit = (e) => {
-    e.preventDefault();
-    console.log("inputValues: ", inputValues);
-
-    // TODO make request and validate
-    // if (true) {
-    //   window.location.href = "/transactions";
-    // }
-  };
-
   return (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>

@@ -1,6 +1,6 @@
 import React from "react";
-import styles, { layout } from "../style";
-import { features, transactions } from "../constants";
+import styles from "../style";
+import { transactions } from "../constants";
 import TxnCard from "../components/login/FeatureCard";
 import { Link } from "react-router-dom";
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../style";
-import { Link } from "react-router-dom";
 
 const EditProfilePage = () => {
   const [inputValues, setInputValues] = useState({ password: "" });
